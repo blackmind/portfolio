@@ -3,6 +3,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import BlurReveal from "./ui/BlurReveal";
 
 const Hero = () => {
   return (
@@ -60,50 +61,9 @@ const Hero = () => {
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi! I&apos;m Priyank, a Fullstack Developer based in USA.
           </p>
-          <TextGenerateEffect
-            words="With over 14 years of experience, I bring a deep technical and
-            managerial skillset to drive complex software projects from
-            inception to deployment. Starting as a .NET and JavaScript
-            developer, I've grown into a seasoned technical project manager,
-            leading cross-functional teams and delivering innovative solutions
-            across HR Tech, Cybersecurity, and Mobile Gaming. I specialize in
-            cloud transformation, with extensive expertise in Microsoft Azure,
-            and excel at managing large, distributed teams to deliver scalable,
-            high-performance applications. My hands-on experience spans
-            full-stack web development, system architecture, and QA automation,
-            ensuring that each project meets business goals with precision and
-            efficiency. My portfolio showcases key projects like Energage
-            Platform, where I modernized legacy systems and built subscription
-            services managing $25M+ in revenue, and NetTrust, a proactive
-            cybersecurity solution for threat detection. My diverse background,
-            award-winning leadership, and continuous focus on innovation make me
-            a reliable partner for advancing technical projects and empowering
-            teams. Let's connect to build future-ready solutions and transform
-            ideas into impactful digital products!"
-            className="text-center text-[10px] md:text-lg lg:text-lg"
-          />
-
-          {/* <p className="uppercase tracking-widest text-xs text-center text-blue-100">
-            With over 14 years of experience, I bring a deep technical and
-            managerial skillset to drive complex software projects from
-            inception to deployment. Starting as a .NET and JavaScript
-            developer, I've grown into a seasoned technical project manager,
-            leading cross-functional teams and delivering innovative solutions
-            across HR Tech, Cybersecurity, and Mobile Gaming. I specialize in
-            cloud transformation, with extensive expertise in Microsoft Azure,
-            and excel at managing large, distributed teams to deliver scalable,
-            high-performance applications. My hands-on experience spans
-            full-stack web development, system architecture, and QA automation,
-            ensuring that each project meets business goals with precision and
-            efficiency. My portfolio showcases key projects like Energage
-            Platform, where I modernized legacy systems and built subscription
-            services managing $25M+ in revenue, and NetTrust, a proactive
-            cybersecurity solution for threat detection. My diverse background,
-            award-winning leadership, and continuous focus on innovation make me
-            a reliable partner for advancing technical projects and empowering
-            teams. Let's connect to build future-ready solutions and transform
-            ideas into impactful digital products!
-          </p> */}
+          <div>
+            <BlurReveal />
+          </div>
 
           <a href="#about">
             <MagicButton
