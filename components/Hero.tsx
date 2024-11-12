@@ -48,23 +48,24 @@ const Hero = () => {
             <MyPhoto />
             {/* <BlurReveal /> */}
           </div>
+          {/* 
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 m-10">
             Senior Technical Project Manager | Cloud Architect | Software
             Development Leader
-          </p>
-
+          </p> 
+          */}
           {/**
            *  Link: https://ui.aceternity.com/components/text-generate-effect
            *
            *  change md:text-6xl, add more responsive code
            */}
           <TextGenerateEffect
-            words="Transforming Concepts into Seamless User Experiences"
+            words="Building Tomorrow's Solutions with Enterprise-Grade Excellence"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Priyank, a Fullstack Developer based in USA.
+          <p className="text-center md:tracking-wider mt-4 mb-4 text-sm md:text-lg lg:text-2xl">
+            Hi! I&apos;m Priyank, a Fullstack Technical Project Manager based in the USA bridging Business Vision with Technical Excellence.
           </p>
 
           <a href="#about">

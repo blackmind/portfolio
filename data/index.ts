@@ -72,9 +72,23 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
+    title: "TopWorkplaces.com",
+    des: "Led the development of TopWorkplaces.com, a premier employer recognition platform that has recognized over 17,000 organizations. Architected a scalable survey and analytics engine processing millions of employee feedback responses annually. Implemented sophisticated data visualization dashboards for workplace culture insights and competitive benchmarking. The platform powers recognition programs for 60+ prestigious media publishers including The Washington Post, The Boston Globe, and The San Diego Union-Tribune, helping organizations gain national visibility as employers of choice. Key achievements include building real-time survey analytics, automated recognition badge generation, and secure data handling for sensitive employee feedback.",
+    img: "/topworkplaces.png",
+    iconLists: [
+      "/azure.svg",
+      "/react.svg",
+      "/dotnet.svg",
+      "/sql.svg",
+      "/redis.svg",
+    ],
+    link: "https://www.topworkplaces.com/",
+  },
+  {
+    id: 2,
     title: "Energage Platform - HR Tech",
     des: "Led migration of on-premise applications to Azure Cloud and modernized legacy systems. Spearheaded subscription management services handling $25M+ in revenue, and enhanced QA automation with TestCafe and Selenium.",
-    img: "/energage.svg",
+    img: "/energage-platform.png",
     iconLists: [
       "/azure.svg",
       "/dotnet.svg",
@@ -85,7 +99,21 @@ export const projects = [
     link: "https://www.energage.com/platform/",
   },
   {
-    id: 2,
+    id: 3,
+    title: "DDI - Pinpoint ATS Integration",
+    des: "Architected and led the modernization of DDI's assessment integration platform using Workato, enabling seamless connectivity between customer ATS systems and DDI's Pinpoint application. Implemented OAuth 2.0 SSO authentication, designed scalable REST APIs, and established automated workflows for assessment requests, user management, and result notifications. Built dedicated customer workspaces with template-based recipes, robust error handling, and comprehensive logging. The solution serves major enterprises like Walmart and Nationwide, providing secure, real-time assessment data synchronization while maintaining strict security standards and SLAs.",
+    img: "/ddi-integration.png",
+    iconLists: [
+      "/workato.svg",
+      "/azure.svg",
+      "/oauth.svg",
+      "/rest-api.svg",
+      "/git.svg",
+    ],
+    link: "https://www.ddiworld.com/",
+  },
+  {
+    id: 4,
     title: "NetTrust - Cyber Security",
     des: "Developed a malware detection system for proactive threat mitigation. Integrated Active Directory and LDAP, implemented PDF reporting, and designed key analytics modules for data breach prevention.",
     img: "/nettrust.svg",
@@ -99,7 +127,7 @@ export const projects = [
     link: "https://www.taassera.com/",
   },
   {
-    id: 3,
+    id: 5,
     title: "Buzzinga - Mobile Adventure Puzzle Game",
     des: "Designed and led the development of a mobile puzzle game, Buzzinga. Created cloud-based messaging for gameplay and optimized Unity3D assets to enhance user interaction on iOS and Android.",
     img: "/buzzinga.svg",
@@ -113,41 +141,6 @@ export const projects = [
     link: "https://apptronixstudios.com/",
   },
 ];
-
-// export const projects = [
-//   {
-//     id: 1,
-//     title: "3D Solar System Planets to Explore",
-//     des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-//     img: "/p1.svg",
-//     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-//     link: "/ui.earth.com",
-//   },
-//   {
-//     id: 2,
-//     title: "Yoom - Video Conferencing App",
-//     des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-//     img: "/p2.svg",
-//     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-//     link: "/ui.yoom.com",
-//   },
-//   {
-//     id: 3,
-//     title: "AI Image SaaS - Canva Application",
-//     des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-//     img: "/p3.svg",
-//     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-//     link: "/ui.aiimg.com",
-//   },
-//   {
-//     id: 4,
-//     title: "Animated Apple Iphone 3D Website",
-//     des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-//     img: "/p4.svg",
-//     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-//     link: "/ui.apple.com",
-//   },
-// ];
 
 export const testimonials = [
   {
