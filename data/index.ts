@@ -100,9 +100,23 @@ export const projects = [
   },
   {
     id: 3,
+    title: "Raptivity OEM Platform Modernization",
+    des: "Architected and led the modernization of Raptivity's OEM platform, a comprehensive interactive learning content creation tool. Implemented a scalable Service-Oriented Architecture (SOA) with enhanced security features including token-based authorization and TLS encryption. Developed a centralized licensing management system and integrated Tin Can API for advanced analytics. The modernized platform provides educational institutions and enterprises with SCORM-compliant e-learning interactions, improved deployment workflows, and seamless Active Directory integration. Key achievements include significant performance improvements, reduced latency in content delivery, and enhanced cross-platform compatibility through HTML5 implementation.",
+    img: "/raptivity.webp",
+    iconLists: [
+      "/dotnet.svg",
+      "/aws.svg",
+      "/sql.svg",
+      "/html5.svg",
+      "/rest-api.svg",
+    ],
+    link: "https://www.raptivity.com/",
+  },
+  {
+    id: 4,
     title: "DDI - Pinpoint ATS Integration",
     des: "Architected and led the modernization of DDI's assessment integration platform using Workato, enabling seamless connectivity between customer ATS systems and DDI's Pinpoint application. Implemented OAuth 2.0 SSO authentication, designed scalable REST APIs, and established automated workflows for assessment requests, user management, and result notifications. Built dedicated customer workspaces with template-based recipes, robust error handling, and comprehensive logging. The solution serves major enterprises like Walmart and Nationwide, providing secure, real-time assessment data synchronization while maintaining strict security standards and SLAs.",
-    img: "/ddi-integration.png",
+    img: "/ddi-logo.svg",
     iconLists: [
       "/workato.svg",
       "/azure.svg",
@@ -113,7 +127,7 @@ export const projects = [
     link: "https://www.ddiworld.com/",
   },
   {
-    id: 4,
+    id: 5,
     title: "NetTrust - Cyber Security",
     des: "Developed a malware detection system for proactive threat mitigation. Integrated Active Directory and LDAP, implemented PDF reporting, and designed key analytics modules for data breach prevention.",
     img: "/nettrust.svg",
@@ -126,20 +140,20 @@ export const projects = [
     ],
     link: "https://www.taassera.com/",
   },
-  {
-    id: 5,
-    title: "Buzzinga - Mobile Adventure Puzzle Game",
-    des: "Designed and led the development of a mobile puzzle game, Buzzinga. Created cloud-based messaging for gameplay and optimized Unity3D assets to enhance user interaction on iOS and Android.",
-    img: "/buzzinga.svg",
-    iconLists: [
-      "/unity.svg",
-      "/csharp.svg",
-      "/googleappengine.svg",
-      "/restapi.svg",
-      "/nosql.svg",
-    ],
-    link: "https://apptronixstudios.com/",
-  },
+  // {
+  //   id: 6,
+  //   title: "Buzzinga - Mobile Adventure Puzzle Game",
+  //   des: "Designed and led the development of a mobile puzzle game, Buzzinga. Created cloud-based messaging for gameplay and optimized Unity3D assets to enhance user interaction on iOS and Android.",
+  //   img: "/buzzinga.svg",
+  //   iconLists: [
+  //     "/unity.svg",
+  //     "/csharp.svg",
+  //     "/googleappengine.svg",
+  //     "/restapi.svg",
+  //     "/nosql.svg",
+  //   ],
+  //   link: "https://apptronixstudios.com/",
+  // },
 ];
 
 export const testimonials = [
