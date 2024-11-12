@@ -19,7 +19,7 @@ const MyPhoto = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[250px] h-[250px] xl:w-[450px] xl:h-[450px] mix-blend-lighten absolute ml-32 mt-6 xl:ml-7 xl:mt-6"
+          className="w-[288px] h-[288px] xl:w-[496px] xl:h-[496px] mix-blend-lighten absolute ml-28 mt-2 xl:ml-0 xl:mt-0"
         >
           <Image
             src="/profile-sq-rounded.png"
@@ -27,7 +27,7 @@ const MyPhoto = () => {
             quality={100}
             fill
             alt="Profile Picture of Priyank Khamitkar"
-            className="object-contain rounded-full aspect-square"
+            className="object-contain rounded-full aspect-square [mask-image:radial-gradient(circle_at_center,white_55%,transparent_65%)]"
           />
         </motion.div>
         {/* circle */}
