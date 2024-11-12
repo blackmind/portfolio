@@ -19,7 +19,7 @@ const MyPhoto = () => {
             opacity: 1,
             transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
           }}
-          className="w-[250px] h-[250px] xl:w-[450px] xl:h-[450px] mix-blend-lighten absolute ml-32 mt-6 xl:ml-6 xl:mt-6"
+          className="w-[250px] h-[250px] xl:w-[450px] xl:h-[450px] mix-blend-lighten absolute ml-32 mt-6 xl:ml-7 xl:mt-6"
         >
           <Image
             src="/profile-sq-rounded.png"
