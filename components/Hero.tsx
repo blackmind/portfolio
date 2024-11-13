@@ -6,81 +6,67 @@ import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import BlurReveal from "./ui/BlurReveal";
 import MyPhoto from "./ui/MyPhoto";
 import Skills from "./Skills";
+import { FaLocationPin } from "react-icons/fa6";
+import { socialMedia } from "@/data";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-20">
-      {/**
-       *  UI: Spotlights
-       *  Link: https://ui.aceternity.com/components/spotlight
-       */}
-      <div>
-        <Spotlight
-          className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
-          fill="white"
-        />
-        <Spotlight
-          className="h-[80vh] w-[50vw] top-10 left-full"
-          fill="purple"
-        />
-        <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
-      </div>
-
-      {/**
-       *  UI: grid
-       *  change bg color to bg-black-100 and reduce grid color from
-       *  0.2 to 0.03
-       */}
-      <div
-        className="h-screen w-full dark:bg-black-100 bg-white dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
-       absolute top-0 left-0 flex items-center justify-center"
-      >
-        {/* Radial gradient for the container to give a faded look */}
-        <div
-          // chnage the bg to bg-black-100, so it matches the bg color and will blend in
-          className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100
-         bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"
-        />
-      </div>
-
-      <div className="flex justify-center relative my-10 z-10">
-        <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <div className="mb-4 xl:mb-0">
-            <MyPhoto />
-            {/* <BlurReveal /> */}
-          </div>
-          {/* 
-          <p className="uppercase tracking-widest text-xs text-center text-blue-100 m-10">
-            Senior Technical Project Manager | Cloud Architect | Software
-            Development Leader
-          </p> 
-          */}
-          {/**
-           *  Link: https://ui.aceternity.com/components/text-generate-effect
-           *
-           *  change md:text-6xl, add more responsive code
-           */}
-          <TextGenerateEffect
-            words="Building tomorrow's solutions with enterprise-grade excellence"
-            className="text-center text-[40px] md:text-5xl lg:text-6xl font-bold tracking-tight"
+    <>
+      <div className="pb-20 pt-20">
+        <div>
+          <Spotlight
+            className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
+            fill="white"
           />
-
-          <p className="text-center tracking-wide mt-4 mb-4 text-sm md:text-lg lg:text-2xl font-normal">
-            Hi! I&apos;m Priyank, a Fullstack Technical Project Manager based in the USA bridging Business Vision with Technical Excellence.
-          </p>
-
-          <Skills />
-
-          <a href="#about">
-            <MagicButton
-              title="Show my work"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+          <Spotlight
+            className="h-[80vh] w-[50vw] top-10 left-full"
+            fill="purple"
+          />
+          <Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
         </div>
+
+
       </div>
-    </div>
+      <div className="pb-20 pt-20 flex flex-wrap justify-center items-center flex-col md:flex-row">
+        <div className="flex-grow sm:w-full xl:w-1/2 md:w-1/2 lg:w-1/2 2xl:w-1/2">
+          <MyPhoto />
+        </div>
+        <div className="flex-grow sm:w-full xl:w-1/2 md:w-1/2 lg:w-1/2 2xl:w-1/2">
+          <h2 className="text-4xl font-bold ">
+            Building tomorrow's solutions with enterprise-grade excellence.
+          </h2>
+
+          <div className="py-4">
+            <h3 className="py-2">
+              Hi! I&apos;m Priyank.
+            </h3>
+
+            <p className="py-2">
+              Fullstack technical project manager bridging business vision with technical excellence.
+            </p>
+            <p>
+              <div className="flex items-center">
+                <FaLocationPin /> &nbsp;Pennsylvania, USA
+              </div>
+            </p>
+          </div>
+          <div className="flex items-center md:gap-3 gap-6">
+            {socialMedia.map((info) => (
+              <a href={info.link} key={info.id} target="_blank">
+
+                <div
+                  key={info.id}
+                  className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+                >
+                  <img src={info.img} alt="icons" width={20} height={20} />
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </>
   );
 };
 
