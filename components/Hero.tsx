@@ -62,10 +62,10 @@ const Hero = () => {
            */}
           <TextGenerateEffect
             words="Building Tomorrow's Solutions with Enterprise-Grade Excellence"
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
+            className="text-center text-[40px] md:text-5xl lg:text-6xl font-bold tracking-tight"
           />
 
-          <p className="text-center md:tracking-wider mt-4 mb-4 text-sm md:text-lg lg:text-2xl">
+          <p className="text-center tracking-wide mt-4 mb-4 text-sm md:text-lg lg:text-2xl font-normal">
             Hi! I&apos;m Priyank, a Fullstack Technical Project Manager based in the USA bridging Business Vision with Technical Excellence.
           </p>
 
