@@ -9,7 +9,7 @@ import Skills from "./Skills";
 
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36">
+    <div className="pb-20 pt-20">
       {/**
        *  UI: Spotlights
        *  Link: https://ui.aceternity.com/components/spotlight
@@ -43,9 +43,9 @@ const Hero = () => {
         />
       </div>
 
-      <div className="flex justify-center relative my-20 z-10">
+      <div className="flex justify-center relative my-10 z-10">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
-          <div className="mb-8 xl:mb-0">
+          <div className="mb-4 xl:mb-0">
             <MyPhoto />
             {/* <BlurReveal /> */}
           </div>
