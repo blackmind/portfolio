@@ -1,6 +1,9 @@
 "use client";
 
-import { FaLocationArrow } from "react-icons/fa6";
+import React from "react";
+import { FaLocationArrow, FaReact, FaAws, FaDocker, FaGitAlt } from "react-icons/fa";
+import { SiTypescript, SiNextdotjs, SiTailwindcss, SiDotnet, SiAzuredevops, SiMicrosoftazure } from "react-icons/si";
+import { TbApi } from "react-icons/tb";
 
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
@@ -52,7 +55,7 @@ const RecentProjects = () => {
 
               <div className="flex items-center justify-between mt-7 mb-3">
                 <div className="flex items-center">
-                  {item.iconLists.map((icon, index) => (
+                  {item.iconLists.map((IconComponent, index) => (
                     <div
                       key={index}
                       className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
@@ -60,7 +63,7 @@ const RecentProjects = () => {
                         transform: `translateX(-${5 * index + 2}px)`,
                       }}
                     >
-                      <img src={icon} alt="icon5" className="p-2" />
+                      <IconComponent className="w-4 h-4 lg:w-5 lg:h-5 text-purple" />
                     </div>
                   ))}
                 </div>

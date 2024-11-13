@@ -1,3 +1,13 @@
+import { FaAws, FaDocker } from "react-icons/fa";
+import { SiNextdotjs, SiTailwindcss, SiDotnet, SiMicrosoftazure, SiAzuredevops, SiOkta, SiMicrosoftsqlserver, SiCsharp, SiQualys } from "react-icons/si";
+
+import { FaReact } from "react-icons/fa";
+import { SiTypescript } from "react-icons/si";
+import { TbApi } from "react-icons/tb";
+import { SiMysql } from "react-icons/si";
+import { FaHtml5 } from "react-icons/fa";
+import { DiGit } from "react-icons/di";
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -74,28 +84,16 @@ export const projects = [
     id: 1,
     title: "TopWorkplaces.com",
     des: "Led the development of TopWorkplaces.com, a premier employer recognition platform that has recognized over 17,000 organizations. Architected a scalable survey and analytics engine processing millions of employee feedback responses annually. Implemented sophisticated data visualization dashboards for workplace culture insights and competitive benchmarking. The platform powers recognition programs for 60+ prestigious media publishers including The Washington Post, The Boston Globe, and The San Diego Union-Tribune, helping organizations gain national visibility as employers of choice. Key achievements include building real-time survey analytics, automated recognition badge generation, and secure data handling for sensitive employee feedback.",
-    img: "/topworkplaces.png",
-    iconLists: [
-      "/azure.svg",
-      "/react.svg",
-      "/dotnet.svg",
-      "/sql.svg",
-      "/redis.svg",
-    ],
+    img: "/topworkplaces.svg",
+    iconLists: [SiNextdotjs, SiTypescript, SiTailwindcss, FaReact, FaAws],
     link: "https://www.topworkplaces.com/",
   },
   {
     id: 2,
     title: "Energage Platform - HR Tech",
     des: "Led migration of on-premise applications to Azure Cloud and modernized legacy systems. Spearheaded subscription management services handling $25M+ in revenue, and enhanced QA automation with TestCafe and Selenium.",
-    img: "/energage-platform.png",
-    iconLists: [
-      "/azure.svg",
-      "/dotnet.svg",
-      "/react.svg",
-      "/sql.svg",
-      "/testcafe.svg",
-    ],
+    img: "/energage.svg",
+    iconLists: [SiDotnet, SiMicrosoftazure, SiAzuredevops, TbApi, FaDocker],
     link: "https://www.energage.com/platform/",
   },
   {
@@ -103,13 +101,7 @@ export const projects = [
     title: "Raptivity OEM Platform Modernization",
     des: "Architected and led the modernization of Raptivity's OEM platform, a comprehensive interactive learning content creation tool. Implemented a scalable Service-Oriented Architecture (SOA) with enhanced security features including token-based authorization and TLS encryption. Developed a centralized licensing management system and integrated Tin Can API for advanced analytics. The modernized platform provides educational institutions and enterprises with SCORM-compliant e-learning interactions, improved deployment workflows, and seamless Active Directory integration. Key achievements include significant performance improvements, reduced latency in content delivery, and enhanced cross-platform compatibility through HTML5 implementation.",
     img: "/raptivity.webp",
-    iconLists: [
-      "/dotnet.svg",
-      "/aws.svg",
-      "/sql.svg",
-      "/html5.svg",
-      "/rest-api.svg",
-    ],
+    iconLists: [SiDotnet, FaAws, SiMysql, FaHtml5, TbApi],
     link: "https://www.raptivity.com/",
   },
   {
@@ -117,13 +109,14 @@ export const projects = [
     title: "DDI - Pinpoint ATS Integration",
     des: "Architected and led the modernization of DDI's assessment integration platform using Workato, enabling seamless connectivity between customer ATS systems and DDI's Pinpoint application. Implemented OAuth 2.0 SSO authentication, designed scalable REST APIs, and established automated workflows for assessment requests, user management, and result notifications. Built dedicated customer workspaces with template-based recipes, robust error handling, and comprehensive logging. The solution serves major enterprises like Walmart and Nationwide, providing secure, real-time assessment data synchronization while maintaining strict security standards and SLAs.",
     img: "/ddi-logo.svg",
-    iconLists: [
-      "/workato.svg",
-      "/azure.svg",
-      "/oauth.svg",
-      "/rest-api.svg",
-      "/git.svg",
-    ],
+    // iconLists: [
+    //   "/workato.svg",
+    //   "/azure.svg",
+    //   "/oauth.svg",
+    //   "/rest-api.svg",
+    //   "/git.svg",
+    // ],
+    iconLists: [SiDotnet, SiMicrosoftazure, SiMicrosoftsqlserver, SiOkta, DiGit],
     link: "https://www.ddiworld.com/",
   },
   {
@@ -131,13 +124,14 @@ export const projects = [
     title: "NetTrust - Cyber Security",
     des: "Developed a malware detection system for proactive threat mitigation. Integrated Active Directory and LDAP, implemented PDF reporting, and designed key analytics modules for data breach prevention.",
     img: "/nettrust.svg",
-    iconLists: [
-      "/csharp.svg",
-      "/winforms.svg",
-      "/wcf.svg",
-      "/mysql.svg",
-      "/qualys.svg",
-    ],
+    // iconLists: [
+    //   "/csharp.svg",
+    //   "/winforms.svg",
+    //   "/wcf.svg",
+    //   "/mysql.svg",
+    //   "/qualys.svg",
+    // ],
+    iconLists: [SiDotnet, SiCsharp, SiMysql, SiQualys, TbApi ],
     link: "https://www.taassera.com/",
   },
   // {
