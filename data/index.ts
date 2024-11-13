@@ -92,7 +92,7 @@ export const projects = [
   {
     id: 2,
     title: "Energage Platform - HR Tech",
-    heading: "Energage Platform",
+    heading: "Energage.com",
     des: "Led migration of on-premise applications to Azure Cloud and modernized legacy systems. Spearheaded subscription management services handling $25M+ in revenue, and enhanced QA automation with TestCafe and Selenium.",
     img: "/energage-platform.png",
     iconLists: [SiDotnet, FaReact, SiMicrosoftazure, TbApi, SiMicrosoftsqlserver, FaDocker, SiKubernetes],
@@ -101,7 +101,7 @@ export const projects = [
   {
     id: 3,
     title: "DDI - Pinpoint ATS Integration",
-    heading: "DDI World",
+    heading: "DDIworld.com",
     des: "Architected and led the modernization of DDI's assessment integration platform using Workato, enabling seamless connectivity between customer ATS systems and DDI's Pinpoint application. Implemented OAuth 2.0 SSO authentication, designed scalable REST APIs, and established automated workflows for assessment requests, user management, and result notifications. Built dedicated customer workspaces with template-based recipes, robust error handling, and comprehensive logging. The solution serves major enterprises like Walmart and Nationwide, providing secure, real-time assessment data synchronization while maintaining strict security standards and SLAs.",
     img: "/ddi-logo.svg",
     iconLists: [SiDotnet, SiMicrosoftazure, SiMicrosoftsqlserver, SiOkta, DiGit],
@@ -110,7 +110,7 @@ export const projects = [
   {
     id: 4,
     title: "Raptivity OEM Platform Modernization",
-    heading: "Raptivity",
+    heading: "Raptivity.com",
     des: "Architected and led the modernization of Raptivity's OEM platform, a comprehensive interactive learning content creation tool. Implemented a scalable Service-Oriented Architecture (SOA) with enhanced security features including token-based authorization and TLS encryption. Developed a centralized licensing management system and integrated Tin Can API for advanced analytics. The modernized platform provides educational institutions and enterprises with SCORM-compliant e-learning interactions, improved deployment workflows, and seamless Active Directory integration. Key achievements include significant performance improvements, reduced latency in content delivery, and enhanced cross-platform compatibility through HTML5 implementation.",
     img: "/raptivity.webp",
     iconLists: [SiDotnet, FaAws, SiMysql, FaHtml5, TbApi],

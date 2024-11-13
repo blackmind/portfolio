@@ -27,7 +27,7 @@ const MyPhoto = () => {
             quality={100}
             fill
             alt="Profile Picture of Priyank Khamitkar"
-            className="object-contain rounded-full aspect-square [mask-image:radial-gradient(circle_at_center,white_55%,transparent_70%)]"
+            className="scale-x-[-1] object-contain rounded-full aspect-square [mask-image:radial-gradient(circle_at_center,white_55%,transparent_70%)]"
           />
         </motion.div>
         {/* circle */}
