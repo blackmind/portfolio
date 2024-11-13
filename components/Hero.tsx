@@ -5,6 +5,7 @@ import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import BlurReveal from "./ui/BlurReveal";
 import MyPhoto from "./ui/MyPhoto";
+import Skills from "./Skills";
 
 const Hero = () => {
   return (
@@ -67,6 +68,8 @@ const Hero = () => {
           <p className="text-center md:tracking-wider mt-4 mb-4 text-sm md:text-lg lg:text-2xl">
             Hi! I&apos;m Priyank, a Fullstack Technical Project Manager based in the USA bridging Business Vision with Technical Excellence.
           </p>
+
+          <Skills />
 
           <a href="#about">
             <MagicButton
