@@ -22,12 +22,12 @@ const MyPhoto = () => {
           className="w-[288px] h-[288px] xl:w-[496px] xl:h-[496px] mix-blend-lighten absolute ml-28 mt-1 xl:ml-1 xl:mt-0"
         >
           <Image
-            src="/profile-sq-rounded.png"
+            src="/priyank-professional-no-bg.png"
             priority
             quality={100}
             fill
             alt="Profile Picture of Priyank Khamitkar"
-            className="scale-x-[-1] object-contain rounded-full aspect-square [mask-image:radial-gradient(circle_at_center,white_55%,transparent_70%)]"
+            className="object-contain rounded-full aspect-square [mask-image:radial-gradient(circle_at_center,white_55%,transparent_70%)]"
           />
         </motion.div>
         {/* circle */}
