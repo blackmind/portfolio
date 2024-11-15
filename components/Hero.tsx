@@ -44,11 +44,10 @@ const Hero = () => {
             <p className="py-2">
               Fullstack technical project manager bridging business vision with technical excellence.
             </p>
-            <p>
-              <div className="flex items-center">
-                <FaLocationPin /> &nbsp;Pennsylvania, USA
-              </div>
-            </p>
+            <div className="flex items-center">
+              <FaLocationPin /> &nbsp;Pennsylvania, USA
+            </div>
+
           </div>
           <div className="flex items-center md:gap-3 gap-6">
             {socialMedia.map((info) => (
