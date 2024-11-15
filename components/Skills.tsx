@@ -1,5 +1,4 @@
-"use client";
-
+import React, { useState } from 'react';
 import { motion } from "framer-motion";
 import Image from "next/image";
 import {
@@ -39,106 +38,136 @@ const workatoLogo = "/workato-logo.png";
 
 const skills = {
     "Frontend": [
-        { name: "React", icon: FaReact },
-        { name: "Next.js", icon: SiNextdotjs },
-        { name: "TypeScript", icon: SiTypescript },
-        { name: "JavaScript", icon: SiJavascript },
-        { name: "Tailwind", icon: SiTailwindcss },
-        { name: "HTML5", icon: FaHtml5 },
-        { name: "CSS", icon: FaCss3Alt },
+        { name: "React", icon: FaReact, subtitle: "JavaScript Library" },
+        { name: "Next.js", icon: SiNextdotjs, subtitle: "React Framework" },
+        { name: "TypeScript", icon: SiTypescript, subtitle: "Programming Language" },
+        { name: "JavaScript", icon: SiJavascript, subtitle: "Programming Language" },
+        { name: "Tailwind", icon: SiTailwindcss, subtitle: "CSS Framework" },
+        { name: "HTML5", icon: FaHtml5, subtitle: "Markup Language" },
+        { name: "CSS", icon: FaCss3Alt, subtitle: "Style Sheet Language" },
     ],
     "Backend": [
-        { name: ".NET", icon: SiDotnet },
-        { name: "C#", icon: SiCsharp },
-        { name: "SQL Server", icon: SiMicrosoftsqlserver },
-        { name: "Postgres", icon: SiPostgresql },
-        { name: "MySQL", icon: SiMysql },
-        { name: "CosmosDB", icon: SiMongodb },
-        { name: "Redis", icon: SiRedis },
-        { name: "REST API", icon: TbApi },
-        { name: "Dapper.NET", icon: DiDatabase },
-        { name: "PowerShell", icon: SiPowershell },
-        { name: "Git", icon: FaGitAlt },
+        { name: ".NET", icon: SiDotnet, subtitle: "Development Platform" },
+        { name: "C#", icon: SiCsharp, subtitle: "Programming Language" },
+        { name: "SQL Server", icon: SiMicrosoftsqlserver, subtitle: "Database" },
+        { name: "Postgres", icon: SiPostgresql, subtitle: "Database" },
+        { name: "MySQL", icon: SiMysql, subtitle: "Database" },
+        { name: "CosmosDB", icon: SiMongodb, subtitle: "NoSQL Database" },
+        { name: "Redis", icon: SiRedis, subtitle: "In-Memory Database" },
+        { name: "REST API", icon: TbApi, subtitle: "API Architecture" },
+        { name: "Dapper.NET", icon: DiDatabase, subtitle: "Micro ORM" },
+        { name: "PowerShell", icon: SiPowershell, subtitle: "Scripting Language" },
+        { name: "Git", icon: FaGitAlt, subtitle: "Version Control" },
     ],
     "Cloud Services": [
-        { name: "Docker", icon: FaDocker },
-        { name: "Kubernetes", icon: SiKubernetes },
-        { name: "Azure", icon: SiMicrosoftazure },
-        { name: "Azure App Services", icon: TbBrandAzure },
-        { name: "Azure Service Bus", icon: TbBrandAzure },
-        { name: "Azure Storage", icon: MdStorage },
-        { name: "Azure App Insights", icon: TbBrandAzure },
-        { name: "Azure Logic Apps", icon: TbBrandAzure },
-        { name: "Azure Web Jobs", icon: TbBrandAzure },
-        { name: "AWS", icon: FaAws },
+        { name: "Docker", icon: FaDocker, subtitle: "Containerization Platform" },
+        { name: "Kubernetes", icon: SiKubernetes, subtitle: "Container Orchestration" },
+        { name: "Azure", icon: SiMicrosoftazure, subtitle: "Cloud Platform" },
+        { name: "Azure App Services", icon: TbBrandAzure, subtitle: "Web Hosting Service" },
+        { name: "Azure Service Bus", icon: TbBrandAzure, subtitle: "Message Queue Service" },
+        { name: "Azure Storage", icon: MdStorage, subtitle: "Cloud Storage" },
+        { name: "Azure App Insights", icon: TbBrandAzure, subtitle: "Application Monitoring" },
+        { name: "Azure Logic Apps", icon: TbBrandAzure, subtitle: "Integration Service" },
+        { name: "Azure Web Jobs", icon: TbBrandAzure, subtitle: "Background Processing" },
+        { name: "AWS", icon: FaAws, subtitle: "Cloud Platform" },
     ],
     "Integrations": [
-        { name: "Workato", logoImg: workatoLogo },
-        { name: "n8n", icon: AiOutlineNodeIndex },
-        { name: "OAuth", icon: MdSecurity },
-        { name: "Auth0", icon: SiAuth0 },
-        { name: "Salesforce", icon: FaSalesforce },
-        { name: "DocuSign", icon: SiDocusign },
+        { name: "Workato", logoImg: workatoLogo, subtitle: "Integration Platform" },
+        { name: "n8n", icon: AiOutlineNodeIndex, subtitle: "Workflow Automation" },
+        { name: "OAuth", icon: MdSecurity, subtitle: "Authorization Protocol" },
+        { name: "Auth0", icon: SiAuth0, subtitle: "Identity Platform" },
+        { name: "Salesforce", icon: FaSalesforce, subtitle: "CRM Platform" },
+        { name: "DocuSign", icon: SiDocusign, subtitle: "eSignature Platform" },
     ],
     "Gaming": [
-        { name: "Unity3D", icon: FaUnity },
+        { name: "Unity3D", icon: FaUnity, subtitle: "Game Engine" },
     ],
 };
 
 const Skills = () => {
-    return (
-        <div className="py-20 w-full">
-            <h1 className="heading">
-                Skills & <span className="text-purple">Expertise</span>
-            </h1>
+    const [activeTab, setActiveTab] = useState("Frontend");
+    const categories = Object.keys(skills);
 
-            <div className="mt-6 w-full">
-                <table className="w-full text-left text-white border-collapse">
-                    <tbody>
-                        {Object.entries(skills).map(([section, skillsArray]) => (
-                            <tr key={section} className="border-b border-white/[0.1]">
-                                <td className="p-4 text-lg font-medium w-min whitespace-nowrap">{section}: </td>
-                                <td className="p-4">
-                                    <div className="flex flex-wrap gap-2">
-                                        {skillsArray.map((skill, index) => (
-                                            <motion.div
-                                                key={skill.name}
-                                                initial={{ opacity: 0, y: 20 }}
-                                                animate={{ opacity: 1, y: 0 }}
-                                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                                whileHover={{
-                                                    scale: 1.05,
-                                                    rotate: [-1, 1, -1, 0],
-                                                    transition: { duration: 0.2 }
-                                                }}
-                                                whileTap={{ scale: 0.95 }}
-                                                className="flex items-center gap-1 bg-[#13162D] rounded-lg px-2 py-1 border border-white/[0.1] hover:border-purple/80 transition-colors cursor-pointer"
-                                            >
-                                                {skill.logoImg ? (
-                                                    <Image
-                                                        src={skill.logoImg}
-                                                        alt={skill.name}
-                                                        width={18}
-                                                        height={18}
-                                                        className="text-purple"
-                                                    />
-                                                ) : (
-                                                    <skill.icon className="w-4 h-4 text-purple" />
-                                                )}
-                                                <span className="text-white/80 text-xs md:text-sm">
-                                                    {skill.name}
-                                                </span>
-                                            </motion.div>
-                                        ))}
-                                    </div>
-                                </td>
-                            </tr>
+    return (
+        <div className="w-full space-y-6">
+            {/* Mobile Tabs */}
+            <div className="lg:hidden w-full overflow-x-auto">
+                <div className="flex space-x-2 p-2 min-w-max">
+                    {categories.map((category) => (
+                        <button
+                            key={category}
+                            onClick={() => setActiveTab(category)}
+                            className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${activeTab === category
+                                ? "bg-purple-600 text-white"
+                                : "bg-[#1A1A1A] text-gray-400 hover:bg-[#222222]"
+                                }`}
+                        >
+                            {category}
+                        </button>
+                    ))}
+                </div>
+            </div>
+
+            {/* Desktop View */}
+            <div className="hidden lg:block space-y-6">
+                {categories.map((category) => (
+                    <div key={category} className="space-y-6">
+                        <h2 className="text-2xl font-medium text-white">{category}</h2>
+                        <div className="grid grid-cols-6 gap-3">
+                            {skills[category].map((skill, index) => (
+                                <SkillCard key={skill.name} skill={skill} index={index} />
+                            ))}
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            {/* Mobile View */}
+            <div className="lg:hidden">
+                <div className="space-y-6">
+                    <h2 className="text-2xl font-medium text-white">{activeTab}</h2>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        {skills[activeTab].map((skill, index) => (
+                            <SkillCard key={skill.name} skill={skill} index={index} />
                         ))}
-                    </tbody>
-                </table>
+                    </div>
+                </div>
             </div>
         </div>
     );
 };
+
+const SkillCard = ({ skill, index }) => (
+    <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        className="bg-[#1A1A1A] rounded-xl p-3 hover:bg-[#222222] transition-colors"
+    >
+        <div className="flex items-center gap-3">
+            <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
+                {skill.logoImg ? (
+                    <Image
+                        src={skill.logoImg}
+                        alt={skill.name}
+                        width={24}
+                        height={24}
+                        className="text-purple-400"
+                    />
+                ) : (
+                    <skill.icon className="w-6 h-6 text-purple-400" />
+                )}
+            </div>
+            <div className="flex flex-col min-w-0">
+                <span className="text-white text-sm font-medium truncate">
+                    {skill.name}
+                </span>
+                <span className="text-gray-500 text-xs truncate sm:hidden md:block lg:block 2xl:block">
+                    {skill.subtitle}
+                </span>
+            </div>
+        </div>
+    </motion.div>
+);
 
 export default Skills;

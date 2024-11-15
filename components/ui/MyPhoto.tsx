@@ -106,7 +106,7 @@ const MyPhoto = () => {
           className="w-[288px] h-[288px] xl:w-[496px] xl:h-[496px] mix-blend-lighten"
         >
           <Image
-            src="/priyank-profile-color.png"
+            src="/priyank-professional-no-bg.png"
             priority
             quality={100}
             fill
