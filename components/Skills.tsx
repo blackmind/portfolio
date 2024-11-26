@@ -9,7 +9,9 @@ import {
     FaGitAlt,
     FaAws,
     FaUnity,
-    FaSalesforce
+    FaSalesforce,
+    FaChevronLeft,
+    FaChevronRight
 } from "react-icons/fa";
 import {
     SiNextdotjs,
@@ -88,49 +90,90 @@ const Skills = () => {
     const [activeTab, setActiveTab] = useState("Frontend");
     const categories = Object.keys(skills);
 
+    const handlePrevTab = () => {
+        const currentIndex = categories.indexOf(activeTab);
+        const prevIndex = currentIndex === 0 ? categories.length - 1 : currentIndex - 1;
+        setActiveTab(categories[prevIndex]);
+    };
+
+    const handleNextTab = () => {
+        const currentIndex = categories.indexOf(activeTab);
+        const nextIndex = currentIndex === categories.length - 1 ? 0 : currentIndex + 1;
+        setActiveTab(categories[nextIndex]);
+    };
+
     return (
         <div className="w-full space-y-6">
-            {/* Mobile Tabs */}
-            <div className="lg:hidden w-full overflow-x-auto">
-                <div className="flex space-x-2 p-2 min-w-max">
-                    {categories.map((category) => (
-                        <button
-                            key={category}
-                            onClick={() => setActiveTab(category)}
-                            className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${activeTab === category
-                                ? "bg-purple-600 text-white"
-                                : "bg-[#1A1A1A] text-gray-400 hover:bg-[#222222]"
+            {/* Tabs Navigation - Both Mobile & Desktop */}
+            <div className="w-full space-y-4">
+                <div className="w-full overflow-x-auto bg-[#0F1521] p-4 rounded-lg">
+                    <div className="flex min-w-max lg:justify-between w-full max-w-4xl mx-auto">
+                        {categories.map((category) => (
+                            <button
+                                key={category}
+                                onClick={() => setActiveTab(category)}
+                                className={`px-8 py-3 rounded-lg text-sm font-medium transition-all duration-300 min-w-[140px] text-center ${
+                                    activeTab === category
+                                        ? "bg-[#1A2435] text-white shadow-lg shadow-black/20 transform scale-105"
+                                        : "bg-[#0F1521] text-gray-400 hover:bg-[#152033] hover:text-gray-300"
                                 }`}
-                        >
-                            {category}
-                        </button>
-                    ))}
+                            >
+                                {category}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Navigation Buttons */}
+                <div className="flex justify-end space-x-2 px-4">
+                    <button
+                        onClick={handlePrevTab}
+                        className="p-3 rounded-full bg-[#0F1521] text-gray-400 hover:bg-[#1A2435] hover:text-white transition-all duration-300"
+                    >
+                        <FaChevronLeft size={20} />
+                    </button>
+                    <button
+                        onClick={handleNextTab}
+                        className="p-3 rounded-full bg-[#0F1521] text-gray-400 hover:bg-[#1A2435] hover:text-white transition-all duration-300"
+                    >
+                        <FaChevronRight size={20} />
+                    </button>
                 </div>
             </div>
 
-            {/* Desktop View */}
-            <div className="hidden lg:block space-y-6">
-                {categories.map((category) => (
-                    <div key={category} className="space-y-6">
-                        <h2 className="text-2xl font-medium text-white">{category}</h2>
-                        <div className="grid grid-cols-6 gap-3">
-                            {skills[category].map((skill, index) => (
-                                <SkillCard key={skill.name} skill={skill} index={index} />
-                            ))}
-                        </div>
-                    </div>
-                ))}
-            </div>
-
-            {/* Mobile View */}
-            <div className="lg:hidden">
+            {/* Content Section - Desktop */}
+            <div className="hidden lg:block">
                 <div className="space-y-6">
                     <h2 className="text-2xl font-medium text-white">{activeTab}</h2>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    <motion.div 
+                        key={activeTab}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className="grid grid-cols-6 gap-3"
+                    >
                         {skills[activeTab].map((skill, index) => (
                             <SkillCard key={skill.name} skill={skill} index={index} />
                         ))}
-                    </div>
+                    </motion.div>
+                </div>
+            </div>
+
+            {/* Content Section - Mobile */}
+            <div className="lg:hidden">
+                <div className="space-y-6">
+                    <h2 className="text-2xl font-medium text-white">{activeTab}</h2>
+                    <motion.div 
+                        key={activeTab}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5 }}
+                        className="grid grid-cols-2 sm:grid-cols-3 gap-3"
+                    >
+                        {skills[activeTab].map((skill, index) => (
+                            <SkillCard key={skill.name} skill={skill} index={index} />
+                        ))}
+                    </motion.div>
                 </div>
             </div>
         </div>

@@ -116,36 +116,6 @@ export const projects = [
     iconLists: [SiDotnet, FaAws, SiMysql, FaHtml5, TbApi],
     link: "https://www.raptivity.com/",
   },
-
-  // {
-  //   id: 5,
-  //   title: "NetTrust - Cyber Security",
-  //   des: "Developed a malware detection system for proactive threat mitigation. Integrated Active Directory and LDAP, implemented PDF reporting, and designed key analytics modules for data breach prevention.",
-  //   img: "/nettrust.svg",
-  //   // iconLists: [
-  //   //   "/csharp.svg",
-  //   //   "/winforms.svg",
-  //   //   "/wcf.svg",
-  //   //   "/mysql.svg",
-  //   //   "/qualys.svg",
-  //   // ],
-  //   iconLists: [SiDotnet, SiCsharp, SiMysql, SiQualys, TbApi ],
-  //   link: "https://www.taassera.com/",
-  // },
-  // {
-  //   id: 6,
-  //   title: "Buzzinga - Mobile Adventure Puzzle Game",
-  //   des: "Designed and led the development of a mobile puzzle game, Buzzinga. Created cloud-based messaging for gameplay and optimized Unity3D assets to enhance user interaction on iOS and Android.",
-  //   img: "/buzzinga.svg",
-  //   iconLists: [
-  //     "/unity.svg",
-  //     "/csharp.svg",
-  //     "/googleappengine.svg",
-  //     "/restapi.svg",
-  //     "/nosql.svg",
-  //   ],
-  //   link: "https://apptronixstudios.com/",
-  // },
 ];
 
 export const testimonials = [
