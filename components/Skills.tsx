@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Button } from "./ui/MovingBorders";
@@ -90,6 +90,7 @@ const skills = {
 const Skills = () => {
     const [activeTab, setActiveTab] = useState("Frontend");
     const categories = Object.keys(skills);
+    const scrollContainerRef = useRef<HTMLDivElement>(null);
 
     const handlePrevTab = () => {
         const currentIndex = categories.indexOf(activeTab);
@@ -103,11 +104,32 @@ const Skills = () => {
         setActiveTab(categories[nextIndex]);
     };
 
+    useEffect(() => {
+        if (scrollContainerRef.current) {
+            const container = scrollContainerRef.current;
+            const activeButton = container.querySelector(`[data-category="${activeTab}"]`);
+            
+            if (activeButton) {
+                const containerWidth = container.offsetWidth;
+                const buttonLeft = (activeButton as HTMLElement).offsetLeft;
+                const buttonWidth = (activeButton as HTMLElement).offsetWidth;
+                
+                // Calculate scroll position to center the button
+                const scrollPosition = buttonLeft - (containerWidth / 2) + (buttonWidth / 2);
+                
+                container.scrollTo({
+                    left: scrollPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }, [activeTab]);
+
     return (
         <div className="w-full space-y-6">
             {/* Tabs Navigation - Both Mobile & Desktop */}
             <div className="w-full space-y-4">
-                <div className="w-full overflow-x-auto bg-[#0F1521] p-4 rounded-lg">
+                <div className="w-full overflow-x-auto bg-[#0F1521] p-4 rounded-lg" ref={scrollContainerRef}>
                     <div className="flex min-w-max lg:justify-between w-full max-w-4xl mx-auto">
                         {categories.map((category) => (
                             activeTab === category ? (
@@ -122,6 +144,7 @@ const Skills = () => {
                                     style={{
                                         background: "rgb(26, 36, 53)",
                                     }}
+                                    data-category={category}
                                 >
                                     {category}
                                 </Button>
@@ -130,6 +153,7 @@ const Skills = () => {
                                     key={category}
                                     onClick={() => setActiveTab(category)}
                                     className="px-8 py-3 rounded-lg text-sm font-medium transition-all duration-300 min-w-[140px] text-center bg-[#0F1521] text-gray-400 hover:bg-[#152033] hover:text-gray-300"
+                                    data-category={category}
                                 >
                                     {category}
                                 </button>
