@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Button } from "./ui/MovingBorders";
 import {
     FaReact,
     FaHtml5,
@@ -109,17 +110,30 @@ const Skills = () => {
                 <div className="w-full overflow-x-auto bg-[#0F1521] p-4 rounded-lg">
                     <div className="flex min-w-max lg:justify-between w-full max-w-4xl mx-auto">
                         {categories.map((category) => (
-                            <button
-                                key={category}
-                                onClick={() => setActiveTab(category)}
-                                className={`px-8 py-3 rounded-lg text-sm font-medium transition-all duration-300 min-w-[140px] text-center ${
-                                    activeTab === category
-                                        ? "bg-[#1A2435] text-white shadow-lg shadow-black/20 transform scale-105"
-                                        : "bg-[#0F1521] text-gray-400 hover:bg-[#152033] hover:text-gray-300"
-                                }`}
-                            >
-                                {category}
-                            </button>
+                            activeTab === category ? (
+                                <Button
+                                    key={category}
+                                    onClick={() => setActiveTab(category)}
+                                    duration={15000}
+                                    borderRadius="0.30rem"
+                                    containerClassName="overflow-hidden rounded-lg"
+                                    borderClassName="rounded-lg"
+                                    className="px-8 py-3 !min-w-[140px] text-center text-white transition-all duration-300 rounded-lg"
+                                    style={{
+                                        background: "rgb(26, 36, 53)",
+                                    }}
+                                >
+                                    {category}
+                                </Button>
+                            ) : (
+                                <button
+                                    key={category}
+                                    onClick={() => setActiveTab(category)}
+                                    className="px-8 py-3 rounded-lg text-sm font-medium transition-all duration-300 min-w-[140px] text-center bg-[#0F1521] text-gray-400 hover:bg-[#152033] hover:text-gray-300"
+                                >
+                                    {category}
+                                </button>
+                            )
                         ))}
                     </div>
                 </div>
@@ -145,7 +159,7 @@ const Skills = () => {
             <div className="hidden lg:block">
                 <div className="space-y-6">
                     <h2 className="text-2xl font-medium text-white">{activeTab}</h2>
-                    <motion.div 
+                    <motion.div
                         key={activeTab}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -163,7 +177,7 @@ const Skills = () => {
             <div className="lg:hidden">
                 <div className="space-y-6">
                     <h2 className="text-2xl font-medium text-white">{activeTab}</h2>
-                    <motion.div 
+                    <motion.div
                         key={activeTab}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
