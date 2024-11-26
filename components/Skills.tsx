@@ -108,15 +108,15 @@ const Skills = () => {
         if (scrollContainerRef.current) {
             const container = scrollContainerRef.current;
             const activeButton = container.querySelector(`[data-category="${activeTab}"]`);
-            
+
             if (activeButton) {
                 const containerWidth = container.offsetWidth;
                 const buttonLeft = (activeButton as HTMLElement).offsetLeft;
                 const buttonWidth = (activeButton as HTMLElement).offsetWidth;
-                
+
                 // Calculate scroll position to center the button
                 const scrollPosition = buttonLeft - (containerWidth / 2) + (buttonWidth / 2);
-                
+
                 container.scrollTo({
                     left: scrollPosition,
                     behavior: 'smooth'
@@ -129,7 +129,16 @@ const Skills = () => {
         <div className="w-full space-y-6">
             {/* Tabs Navigation - Both Mobile & Desktop */}
             <div className="w-full space-y-4">
-                <div className="w-full overflow-x-auto bg-[#0F1521] p-4 rounded-lg" ref={scrollContainerRef}>
+                <div
+                    className="w-full overflow-x-auto rounded-lg border border-black/.1 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] p-4"
+                    ref={scrollContainerRef}
+                    style={{
+                        backdropFilter: "blur(16px) saturate(180%)",
+                        backgroundColor: "rgba(17, 25, 40, 0.75)",
+                        borderRadius: "12px",
+                        border: "1px solid rgba(255, 255, 255, 0.125)",
+                    }}
+                >
                     <div className="flex min-w-max lg:justify-between w-full max-w-4xl mx-auto">
                         {categories.map((category) => (
                             activeTab === category ? (
@@ -182,7 +191,7 @@ const Skills = () => {
             {/* Content Section - Desktop */}
             <div className="hidden lg:block">
                 <div className="space-y-6">
-                    <h2 className="text-2xl font-medium text-white">{activeTab}</h2>
+                    {/* <h2 className="text-2xl font-medium text-white">{activeTab}</h2> */}
                     <motion.div
                         key={activeTab}
                         initial={{ opacity: 0, y: 20 }}
@@ -200,7 +209,7 @@ const Skills = () => {
             {/* Content Section - Mobile */}
             <div className="lg:hidden">
                 <div className="space-y-6">
-                    <h2 className="text-2xl font-medium text-white">{activeTab}</h2>
+                    {/* <h2 className="text-2xl font-medium text-white">{activeTab}</h2> */}
                     <motion.div
                         key={activeTab}
                         initial={{ opacity: 0, y: 20 }}
