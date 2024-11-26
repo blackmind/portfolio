@@ -149,7 +149,7 @@ const Skills = () => {
                                     borderRadius="0.30rem"
                                     containerClassName="overflow-hidden rounded-lg"
                                     borderClassName="rounded-lg"
-                                    className="px-8 py-3 !min-w-[140px] text-center text-white transition-all duration-300 rounded-lg"
+                                    className="px-3 md:px-8 py-2 md:py-3 !min-w-[100px] md:!min-w-[140px] text-center text-white text-sm md:text-base transition-all duration-300 rounded-lg uppercase tracking-wide"
                                     style={{
                                         background: "rgb(26, 36, 53)",
                                     }}
@@ -161,7 +161,7 @@ const Skills = () => {
                                 <button
                                     key={category}
                                     onClick={() => setActiveTab(category)}
-                                    className="px-8 py-3 rounded-lg text-sm font-medium transition-all duration-300 min-w-[140px] text-center bg-[#0F1521] text-gray-400 hover:bg-[#152033] hover:text-gray-300"
+                                    className="px-3 md:px-8 py-2 md:py-3 rounded-lg text-xs md:text-sm font-medium transition-all duration-300 min-w-[100px] md:min-w-[140px] text-center bg-[#0F1521] text-gray-400 hover:bg-[#152033] hover:text-gray-300 uppercase tracking-wide"
                                     data-category={category}
                                 >
                                     {category}
