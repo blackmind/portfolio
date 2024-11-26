@@ -38,7 +38,7 @@ const Hero = () => {
 
           <div className="py-4">
             <h3 className="py-2">
-              Hi! I&apos;m Priyank.
+              Hi! I&apos;m Priyank [ p r ih y uh n k ].
             </h3>
 
             <p className="py-2">
